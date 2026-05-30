@@ -1,4 +1,6 @@
+import type { ReactNode } from "react";
 import { useCounter } from "@/hooks/useReveal";
+
 import {
   Activity, Award, Brain, Briefcase, Building2, Calendar, Code2, FileCheck, Github,
   GraduationCap, Heart, Instagram, Layers, Linkedin, Mail, MapPin, Megaphone, Pill,
