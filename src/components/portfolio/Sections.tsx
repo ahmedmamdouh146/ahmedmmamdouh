@@ -538,8 +538,8 @@ export const Gallery = () => {
             <button
               key={`${g.src}-${i}`}
               onClick={() => setIdx(i)}
-              className="group relative mb-6 w-full break-inside-avoid block glass rounded-3xl overflow-hidden glass-hover reveal"
-              style={{ transitionDelay: `${(i % 6) * 50}ms` }}
+              className="group relative mb-6 w-full break-inside-avoid block glass rounded-3xl overflow-hidden glass-hover animate-fade-in"
+              style={{ animationDelay: `${(i % 6) * 60}ms` }}
             >
               <img
                 src={g.src}
