@@ -50,7 +50,7 @@ const InfoChip = ({ icon: Icon, label }: { icon: any; label: string }) => (
   </div>
 );
 
-export const SectionLabel = ({ children }: { children: React.ReactNode }) => (
+export const SectionLabel = ({ children }: { children: ReactNode }) => (
   <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary-glow">
     <span className="w-8 h-px bg-primary-glow" /> {children}
   </div>
