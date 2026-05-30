@@ -1,21 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
-import portrait from "@/assets/hero-portrait.jpg";
+import portrait from "@/assets/ahmed-portrait.jpg";
 import bgGlow from "@/assets/bg-glow.jpg";
 
 export const Hero = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!ref.current) return;
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      ref.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(1200px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateZ(0)`;
+  };
+  const onMouseLeave = () => {
+    if (cardRef.current) cardRef.current.style.transform = "perspective(1200px) rotateY(0) rotateX(0)";
+  };
 
   return (
     <section id="top" className="relative min-h-screen overflow-hidden pt-28 pb-20 grid-bg">
@@ -54,7 +55,7 @@ export const Hero = () => {
               href="#contact"
               className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-105 transition-transform"
             >
-              <Mail className="w-4 h-4" /> Get in Touch
+              <Mail className="w-4 h-4" /> Let's Connect
             </a>
             <a
               href="#cv"
@@ -65,16 +66,26 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div ref={ref} className="lg:col-span-5 relative transition-transform duration-300 ease-out">
-          <div className="relative mx-auto max-w-md">
-            <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-2xl opacity-40 animate-pulse-glow" />
+        <div
+          className="lg:col-span-5 relative"
+          onMouseMove={onMouseMove}
+          onMouseLeave={onMouseLeave}
+          style={{ perspective: "1200px" }}
+        >
+          <div
+            ref={cardRef}
+            className="relative mx-auto max-w-md transition-transform duration-300 ease-out"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            <div className="absolute -inset-8 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-50 animate-pulse-glow" />
+            <div className="absolute -inset-2 rounded-[2.2rem] bg-gradient-to-tr from-primary via-primary-glow to-accent opacity-60 blur-xl animate-pulse-glow" />
             <div className="relative glass rounded-[2rem] p-3 overflow-hidden">
               <img
                 src={portrait}
-                alt="Ahmed Mamdouh portrait"
-                width={1024}
-                height={1024}
-                className="w-full h-auto rounded-3xl object-cover"
+                alt="Ahmed Mamdouh — portrait"
+                width={960}
+                height={1280}
+                className="w-full h-auto rounded-3xl object-cover aspect-[3/4]"
               />
               <div className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-4 flex items-center justify-between">
                 <div>
