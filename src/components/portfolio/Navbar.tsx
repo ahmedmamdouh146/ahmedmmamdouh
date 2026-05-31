@@ -56,7 +56,7 @@ export const Navbar = () => {
           href="#contact"
           className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-primary text-primary-foreground hover:scale-105 transition-transform glow-primary"
         >
-          Hire Me
+          Contact Me
         </a>
 
         <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
@@ -83,7 +83,7 @@ export const Navbar = () => {
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex justify-center items-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground"
             >
-              Hire Me
+              Contact Me
             </a>
           </ul>
         </div>
