@@ -20,6 +20,10 @@ import activityGroup from "@/assets/activity-group.jpg";
 import activityTeam from "@/assets/activity-team.jpg";
 import activityCampaign from "@/assets/activity-campaign.jpg";
 import pharmaPoster from "@/assets/pharmacognosy-poster.jpg";
+import scopsTeam from "@/assets/scops-team.jpg";
+import awarenessTools from "@/assets/awareness-tools.jpg";
+import compoundingEvent from "@/assets/compounding-event.jpg";
+import depiGigs from "@/assets/depi-gigs.jpg";
 
 /* ---------------- About ---------------- */
 export const About = () => (
@@ -129,6 +133,7 @@ const timeline = [
   { y: "2026", t: "Team Leader at SCOPS", d: "Promoted to lead a SCOPS team — people, projects, and outreach." },
   { y: "2026", t: "Led Pharmacognosy Project", d: "End-to-end leadership of an academic Pharmacognosy research project." },
   { y: "2026", t: "Healthcare Awareness Campaigns", d: "Participated in and organized community awareness campaigns." },
+  { y: "2026", t: "Compounding Lab Event", d: "Hands-on compounding session with the pharmacy team — formulation practice in the lab." },
 ];
 export const Timeline = () => {
   const [active, setActive] = useState(0);
@@ -347,14 +352,16 @@ export const Projects = () => {
         {/* Other projects */}
         <div className="grid md:grid-cols-2 gap-6 mt-16">
           {[
-            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Contributed to public-facing campaigns translating clinical knowledge into accessible community education.", i: Megaphone },
-            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered — modern interfaces shipped under real client constraints.", i: Code2 },
+            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Organized a community campaign on cardiovascular awareness — interactive booth, educational tools, and on-ground engagement with hundreds of attendees.", i: Megaphone, img: activityCampaign },
+            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered through the DEPI platform — modern interfaces shipped under real client constraints.", i: Code2, img: depiGigs },
           ].map((p, i) => (
             <article key={p.t} className="group glass glass-hover rounded-3xl overflow-hidden reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-              <div className="relative h-48 bg-gradient-primary overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/40" />
-                <p.i className="absolute inset-0 m-auto w-16 h-16 text-primary-foreground/80 group-hover:scale-110 transition-transform" />
-                <div className="absolute top-4 left-4 text-xs uppercase tracking-widest text-primary-foreground/90 glass px-3 py-1 rounded-full">{p.tag}</div>
+              <div className="relative h-56 overflow-hidden">
+                <img src={p.img} alt={p.t} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
+                <div className="absolute top-4 left-4 text-xs uppercase tracking-widest text-primary-glow glass px-3 py-1 rounded-full inline-flex items-center gap-2">
+                  <p.i className="w-3.5 h-3.5" /> {p.tag}
+                </div>
               </div>
               <div className="p-7">
                 <h3 className="font-display text-2xl mb-3">{p.t}</h3>
@@ -488,10 +495,14 @@ type GalleryEntry = { src: string; cat: string; t: string };
 const galleryItems: GalleryEntry[] = [
   { src: ahmedPortrait, cat: "Professional Portraits", t: "Ahmed Mamdouh" },
   { src: marblePortrait, cat: "Professional Portraits", t: "Editorial Portrait" },
+  { src: scopsTeam, cat: "Leadership Activities", t: "My SCOPS Team" },
   { src: activityTeam, cat: "Leadership Activities", t: "SCOPS Leadership" },
   { src: activityGroup, cat: "SCOPS Activities", t: "SCOPS Team Gathering" },
+  { src: compoundingEvent, cat: "SCOPS Activities", t: "Compounding Lab Event" },
   { src: activityCampaign, cat: "Awareness Campaigns", t: "Healthcare Awareness Day" },
+  { src: awarenessTools, cat: "Awareness Campaigns", t: "Awareness Campaign Tools" },
   { src: pharmaPoster, cat: "Academic Projects", t: "Pharmacognosy Poster" },
+  { src: depiGigs, cat: "Academic Projects", t: "DEPI Approved Gigs" },
   { src: certMaestro, cat: "Certificates", t: "The Maestro" },
   { src: certKingTeam, cat: "Certificates", t: "King of the Team" },
   { src: certKingGen, cat: "Certificates", t: "King of the Generation" },
@@ -679,7 +690,7 @@ export const FeaturedCertificates = () => {
 /* ---------------- Contact ---------------- */
 const socials = [
   { i: Linkedin, l: "LinkedIn", h: "https://linkedin.com" },
-  { i: Github, l: "GitHub", h: "https://github.com" },
+  { i: Github, l: "GitHub", h: "https://github.com/ahmedmamdouh146" },
   { i: Instagram, l: "Instagram", h: "https://instagram.com" },
   { i: Facebook, l: "Facebook", h: "https://facebook.com" },
 ];
