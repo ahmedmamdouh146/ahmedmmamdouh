@@ -58,7 +58,8 @@ export const Hero = () => {
               <Mail className="w-4 h-4" /> Let's Connect
             </a>
             <a
-              href="#cv"
+              href="/Ahmed-Mamdouh-CV.pdf"
+              download
               className="group inline-flex items-center gap-2 px-7 py-4 rounded-full glass glass-hover font-medium"
             >
               <Download className="w-4 h-4" /> Download CV

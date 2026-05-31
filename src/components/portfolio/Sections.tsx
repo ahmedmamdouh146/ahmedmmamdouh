@@ -701,8 +701,11 @@ export const Contact = () => (
               <a href="mailto:ahmed.mamdouh@example.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scale-105 transition-transform">
                 <Mail className="w-4 h-4" /> Contact Me
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
-                <Download className="w-4 h-4" /> View / Download CV
+              <a href="/Ahmed-Mamdouh-CV.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
+                <Eye className="w-4 h-4" /> View CV
+              </a>
+              <a href="/Ahmed-Mamdouh-CV.pdf" download className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
+                <Download className="w-4 h-4" /> Download CV
               </a>
             </div>
             <div className="flex gap-3 mt-8">
