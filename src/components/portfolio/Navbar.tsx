@@ -81,14 +81,14 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="lg:hidden absolute top-full inset-x-0 glass mx-4 mt-2 rounded-2xl p-6 animate-fade-in">
-          <ul className="flex flex-col gap-2">
+        <div className="lg:hidden absolute top-full inset-x-4 mt-2 rounded-2xl p-6 bg-background/95 backdrop-blur-2xl border border-border shadow-2xl animate-fade-in">
+          <ul className="flex flex-col gap-1">
             {links.map((l) => (
               <li key={l.id}>
                 <a
                   href={`#${l.id}`}
                   onClick={(e) => { e.preventDefault(); scrollToId(l.id); setOpen(false); }}
-                  className="block py-2 text-foreground/80 hover:text-primary"
+                  className="block py-3 px-4 rounded-xl text-foreground/90 hover:text-primary hover:bg-primary/10 transition-colors font-medium"
                 >
                   {l.label}
                 </a>
@@ -97,7 +97,7 @@ export const Navbar = () => {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); scrollToId("contact"); setOpen(false); }}
-              className="mt-3 inline-flex justify-center items-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground"
+              className="mt-3 inline-flex justify-center items-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium"
             >
               Contact Me
             </a>
