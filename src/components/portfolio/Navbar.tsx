@@ -51,10 +51,6 @@ export const Navbar = () => {
             Ahmed <span className="text-gradient-primary">Mamdouh</span>
           </span>
         </a>
-          <span className="font-display tracking-tight text-lg hidden sm:inline">
-            Ahmed <span className="text-gradient-primary">Mamdouh</span>
-          </span>
-        </a>
 
         <ul className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
