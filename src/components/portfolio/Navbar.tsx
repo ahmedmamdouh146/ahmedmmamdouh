@@ -38,7 +38,11 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
+        <a
+          href="#"
+          onClick={(e) => { e.preventDefault(); scrollToId("top"); }}
+          className="flex items-center gap-2 group"
+        >
           <span className="w-9 h-9 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground group-hover:scale-110 transition-transform">
             A
           </span>
@@ -49,9 +53,10 @@ export const Navbar = () => {
 
         <ul className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.id}>
               <a
-                href={l.href}
+                href={`#${l.id}`}
+                onClick={(e) => { e.preventDefault(); scrollToId(l.id); }}
                 className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
               >
                 {l.label}
@@ -63,6 +68,7 @@ export const Navbar = () => {
 
         <a
           href="#contact"
+          onClick={(e) => { e.preventDefault(); scrollToId("contact"); }}
           className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-primary text-primary-foreground hover:scale-105 transition-transform glow-primary"
         >
           Contact Me
@@ -77,10 +83,10 @@ export const Navbar = () => {
         <div className="lg:hidden absolute top-full inset-x-0 glass mx-4 mt-2 rounded-2xl p-6 animate-fade-in">
           <ul className="flex flex-col gap-2">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.id}>
                 <a
-                  href={l.href}
-                  onClick={() => setOpen(false)}
+                  href={`#${l.id}`}
+                  onClick={(e) => { e.preventDefault(); scrollToId(l.id); setOpen(false); }}
                   className="block py-2 text-foreground/80 hover:text-primary"
                 >
                   {l.label}
@@ -89,7 +95,7 @@ export const Navbar = () => {
             ))}
             <a
               href="#contact"
-              onClick={() => setOpen(false)}
+              onClick={(e) => { e.preventDefault(); scrollToId("contact"); setOpen(false); }}
               className="mt-3 inline-flex justify-center items-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground"
             >
               Contact Me
