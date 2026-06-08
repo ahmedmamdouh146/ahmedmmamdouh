@@ -53,6 +53,10 @@ export const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-105 transition-transform"
             >
               <Mail className="w-4 h-4" /> Let's Connect
