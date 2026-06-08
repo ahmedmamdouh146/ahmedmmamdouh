@@ -104,7 +104,14 @@ export const Hero = () => {
         </div>
       </div>
 
-      <a href="#about" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/60 hover:text-primary animate-float">
+      <a
+        href="#about"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/60 hover:text-primary animate-float"
+      >
         <ArrowDown />
       </a>
     </section>
