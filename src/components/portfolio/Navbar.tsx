@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import portrait from "@/assets/ahmed-portrait.jpg";
 
 const links = [
   { id: "about", label: "About" },
