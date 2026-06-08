@@ -44,9 +44,13 @@ export const Navbar = () => {
           onClick={(e) => { e.preventDefault(); scrollToId("top"); }}
           className="flex items-center gap-2 group"
         >
-          <span className="w-9 h-9 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground group-hover:scale-110 transition-transform">
-            A
+          <span className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:scale-110 transition-transform">
+            <img src={portrait} alt="Ahmed Mamdouh" className="w-full h-full object-cover" />
           </span>
+          <span className="font-display tracking-tight text-lg hidden sm:inline">
+            Ahmed <span className="text-gradient-primary">Mamdouh</span>
+          </span>
+        </a>
           <span className="font-display tracking-tight text-lg hidden sm:inline">
             Ahmed <span className="text-gradient-primary">Mamdouh</span>
           </span>
