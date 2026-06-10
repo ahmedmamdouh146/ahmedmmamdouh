@@ -90,6 +90,8 @@ export const Hero = () => {
                 alt="Ahmed Mamdouh — portrait"
                 width={960}
                 height={1280}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto rounded-3xl object-cover aspect-[3/4]"
               />
               <div className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-4 flex items-center justify-between">
