@@ -357,7 +357,7 @@ export const Projects = () => {
           ].map((p, i) => (
             <article key={p.t} className="group glass glass-hover rounded-3xl overflow-hidden reveal" style={{ transitionDelay: `${i * 80}ms` }}>
               <div className="relative h-56 overflow-hidden">
-                <img src={p.img} alt={p.t} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={p.img} alt={p.t} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
                 <div className="absolute top-4 left-4 text-xs uppercase tracking-widest text-primary-glow glass px-3 py-1 rounded-full inline-flex items-center gap-2">
                   <p.i className="w-3.5 h-3.5" /> {p.tag}
@@ -448,7 +448,7 @@ export const Certifications = () => {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={c.src} alt={c.t} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={c.src} alt={c.t} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass text-[10px] uppercase tracking-widest text-primary-glow">
                   <Award className="w-3 h-3" /> {c.tag}
@@ -659,7 +659,7 @@ export const FeaturedCertificates = () => {
             >
               <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-2xl group-hover:opacity-40 transition-opacity" />
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={c.src} alt={c.t} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={c.src} alt={c.t} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-[10px] uppercase tracking-widest glow-primary">
                   <Crown className="w-3 h-3" /> {c.badge}
