@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-export const Particles = ({ count = 24 }: { count?: number }) => {
+export const Particles = ({ count = 12 }: { count?: number }) => {
   const dots = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => ({
@@ -16,7 +16,7 @@ export const Particles = ({ count = 24 }: { count?: number }) => {
   );
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
       {dots.map((d) => (
         <span
           key={d.id}
@@ -30,6 +30,7 @@ export const Particles = ({ count = 24 }: { count?: number }) => {
             boxShadow: `0 0 ${d.size * 4}px hsl(var(--primary-glow))`,
             animationDelay: `${d.delay}s`,
             animationDuration: `${d.duration}s`,
+            willChange: "transform, opacity",
           }}
         />
       ))}
