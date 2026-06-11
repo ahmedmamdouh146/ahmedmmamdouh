@@ -709,7 +709,7 @@ export const Contact = () => (
               If you're hiring in healthcare, tech, or anything in between — I'd love to hear from you.
             </p>
             <div className="flex flex-wrap gap-4 mt-8" id="cv">
-              <a href="mailto:ahmedmamdouh146207@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scale-105 transition-transform">
+              <a href="mailto:ahmedmamdouh1462007@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scale-105 transition-transform">
                 <Mail className="w-4 h-4" /> Contact Me
               </a>
               <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
@@ -743,7 +743,7 @@ export const Contact = () => (
 
       <footer className="mt-16 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm text-muted-foreground">
         <div>© Ahmed Mamdouh — All Rights Reserved</div>
-        <div className="flex items-center gap-2"><Sparkles className="w-3 h-3 text-primary-glow" /> Healthcare · Technology · Leadership</div>
+        <div className="flex items-center gap-2"><Sparkles className="w-3 h-3 text-primary-glow" /> Healthcare | Technology | Leadership</div>
       </footer>
     </div>
   </section>
