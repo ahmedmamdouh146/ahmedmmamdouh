@@ -171,7 +171,7 @@ export const Timeline = () => {
                   </button>
                 </div>
                 <div className="hidden md:block" />
-                <span className={`absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full transition-all ring-4 ring-background ${isActive ? "bg-primary-glow scale-150 glow-primary" : "bg-primary"}`} />
+                <span className={`absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full transition-all ring-4 ring-background ${isActive ? "bg-primary-glow scale-150 glow-primar[...]
               </div>
             );
           })}
@@ -319,7 +319,7 @@ export const Projects = () => {
                 height={1280}
                 className="relative w-full h-auto rounded-2xl object-cover aspect-[4/5] group-hover:scale-[1.02] transition-transform duration-700"
               />
-              <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-xs uppercase tracking-widest glow-primary">
+              <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-xs uppercase tracking-widest glow-prim[...]
                 <Crown className="w-3.5 h-3.5" /> Project Leader
               </div>
               <div className="absolute bottom-6 right-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs">
@@ -352,8 +352,8 @@ export const Projects = () => {
         {/* Other projects */}
         <div className="grid md:grid-cols-2 gap-6 mt-16">
           {[
-            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Organized a community campaign on cardiovascular awareness — interactive booth, educational tools, and on-ground engagement with hundreds of attendees.", i: Megaphone, img: activityCampaign },
-            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered through the DEPI platform — modern interfaces shipped under real client constraints.", i: Code2, img: depiGigs },
+            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Organized a community campaign on cardiovascular awareness — interactive booth, educational tools, and on-g[...]
+            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered through the DEPI platform — modern interfaces shipped under real client constr[...]
           ].map((p, i) => (
             <article key={p.t} className="group glass glass-hover rounded-3xl overflow-hidden reveal" style={{ transitionDelay: `${i * 80}ms` }}>
               <div className="relative h-56 overflow-hidden">
@@ -661,7 +661,7 @@ export const FeaturedCertificates = () => {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={c.src} alt={c.t} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-[10px] uppercase tracking-widest glow-primary">
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-[10px] uppercase tracking-widest [...]
                   <Crown className="w-3 h-3" /> {c.badge}
                 </div>
               </div>
@@ -689,10 +689,10 @@ export const FeaturedCertificates = () => {
 
 /* ---------------- Contact ---------------- */
 const socials = [
-  { i: Linkedin, l: "LinkedIn", h: "www.linkedin.com/in/ahmed-mamdouh-867b67388" },
+  { i: Linkedin, l: "LinkedIn", h: "https://linkedin.com" },
   { i: Github, l: "GitHub", h: "https://github.com/ahmedmamdouh146" },
-  { i: Instagram, l: "Instagram", h: "https://www.instagram.com/ahmed_mamdouh0?utm_source=qr" },
-  { i: Facebook, l: "Facebook", h: "https://www.facebook.com/share/19BKpnQiNo/?mibextid=wwXIfr" },
+  { i: Instagram, l: "Instagram", h: "https://instagram.com" },
+  { i: Facebook, l: "Facebook", h: "https://facebook.com" },
 ];
 export const Contact = () => (
   <section id="contact" className="cv-auto relative py-32 bg-gradient-to-b from-secondary/30 to-background">
@@ -709,10 +709,10 @@ export const Contact = () => (
               If you're hiring in healthcare, tech, or anything in between — I'd love to hear from you.
             </p>
             <div className="flex flex-wrap gap-4 mt-8" id="cv">
-              <a href="mailto:ahmedmamdouh1462007@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scale-105 transition-transform">
+              <a href="mailto:ahmedmamdouh1462007@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scal[...]
                 <Mail className="w-4 h-4" /> Contact Me
               </a>
-              <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
+              <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-[...]
                 <Eye className="w-4 h-4" /> View CV
               </a>
               <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} download className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
@@ -721,7 +721,7 @@ export const Contact = () => (
             </div>
             <div className="flex gap-3 mt-8">
               {socials.map((s) => (
-                <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer" aria-label={s.l} className="w-12 h-12 rounded-2xl glass grid place-items-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer" aria-label={s.l} className="w-12 h-12 rounded-2xl glass grid place-items-center hover:bg-primary hover:text-prima[...]
                   <s.i className="w-5 h-5" />
                 </a>
               ))}
@@ -733,8 +733,8 @@ export const Contact = () => (
               <input className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors" placeholder="Email" type="email" />
             </div>
             <input className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors" placeholder="Subject" />
-            <textarea rows={5} className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me about the opportunity…" />
-            <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] transition-transform">
+            <textarea rows={5} className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me abou[...]
+            <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] t[...]
               <Send className="w-4 h-4" /> Send message
             </button>
           </form>
