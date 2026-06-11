@@ -9,21 +9,21 @@ import {
   Download, Eye, ImageIcon, Layers, Presentation, ClipboardList
 } from "lucide-react";
 
-import marblePortrait from "@/assets/marble-portrait.jpg";
-import ahmedPortrait from "@/assets/ahmed-portrait.jpg";
-import certMaestro from "@/assets/cert-maestro.jpg";
-import certKingTeam from "@/assets/cert-king-team.jpg";
-import certKingGen from "@/assets/cert-king-generation.jpg";
-import certSeropipe from "@/assets/cert-seropipe.jpg";
-import certBestMovie from "@/assets/cert-best-movie.jpg";
-import activityGroup from "@/assets/activity-group.jpg";
-import activityTeam from "@/assets/activity-team.jpg";
-import activityCampaign from "@/assets/activity-campaign.jpg";
-import pharmaPoster from "@/assets/pharmacognosy-poster.jpg";
-import scopsTeam from "@/assets/scops-team.jpg";
-import awarenessTools from "@/assets/awareness-tools.jpg";
-import compoundingEvent from "@/assets/compounding-event.jpg";
-import depiGigs from "@/assets/depi-gigs.jpg";
+import marblePortrait from "@/assets/marble-portrait.webp";
+import ahmedPortrait from "@/assets/ahmed-portrait.webp";
+import certMaestro from "@/assets/cert-maestro.webp";
+import certKingTeam from "@/assets/cert-king-team.webp";
+import certKingGen from "@/assets/cert-king-generation.webp";
+import certSeropipe from "@/assets/cert-seropipe.webp";
+import certBestMovie from "@/assets/cert-best-movie.webp";
+import activityGroup from "@/assets/activity-group.webp";
+import activityTeam from "@/assets/activity-team.webp";
+import activityCampaign from "@/assets/activity-campaign.webp";
+import pharmaPoster from "@/assets/pharmacognosy-poster.webp";
+import scopsTeam from "@/assets/scops-team.webp";
+import awarenessTools from "@/assets/awareness-tools.webp";
+import compoundingEvent from "@/assets/compounding-event.webp";
+import depiGigs from "@/assets/depi-gigs.webp";
 
 /* ---------------- About ---------------- */
 export const About = () => (
