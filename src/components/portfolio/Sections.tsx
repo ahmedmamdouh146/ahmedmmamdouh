@@ -9,25 +9,25 @@ import {
   Download, Eye, ImageIcon, Layers, Presentation, ClipboardList
 } from "lucide-react";
 
-import marblePortrait from "@/assets/marble-portrait.jpg";
-import ahmedPortrait from "@/assets/ahmed-portrait.jpg";
-import certMaestro from "@/assets/cert-maestro.jpg";
-import certKingTeam from "@/assets/cert-king-team.jpg";
-import certKingGen from "@/assets/cert-king-generation.jpg";
-import certSeropipe from "@/assets/cert-seropipe.jpg";
-import certBestMovie from "@/assets/cert-best-movie.jpg";
-import activityGroup from "@/assets/activity-group.jpg";
-import activityTeam from "@/assets/activity-team.jpg";
-import activityCampaign from "@/assets/activity-campaign.jpg";
-import pharmaPoster from "@/assets/pharmacognosy-poster.jpg";
-import scopsTeam from "@/assets/scops-team.jpg";
-import awarenessTools from "@/assets/awareness-tools.jpg";
-import compoundingEvent from "@/assets/compounding-event.jpg";
-import depiGigs from "@/assets/depi-gigs.jpg";
+import marblePortrait from "@/assets/marble-portrait.webp";
+import ahmedPortrait from "@/assets/ahmed-portrait.webp";
+import certMaestro from "@/assets/cert-maestro.webp";
+import certKingTeam from "@/assets/cert-king-team.webp";
+import certKingGen from "@/assets/cert-king-generation.webp";
+import certSeropipe from "@/assets/cert-seropipe.webp";
+import certBestMovie from "@/assets/cert-best-movie.webp";
+import activityGroup from "@/assets/activity-group.webp";
+import activityTeam from "@/assets/activity-team.webp";
+import activityCampaign from "@/assets/activity-campaign.webp";
+import pharmaPoster from "@/assets/pharmacognosy-poster.webp";
+import scopsTeam from "@/assets/scops-team.webp";
+import awarenessTools from "@/assets/awareness-tools.webp";
+import compoundingEvent from "@/assets/compounding-event.webp";
+import depiGigs from "@/assets/depi-gigs.webp";
 
 /* ---------------- About ---------------- */
 export const About = () => (
-  <section id="about" className="relative py-32">
+  <section id="about" className="cv-auto relative py-32">
     <div className="container grid lg:grid-cols-12 gap-16 items-center">
       <div className="lg:col-span-5 reveal space-y-10">
         <div>
@@ -138,7 +138,7 @@ const timeline = [
 export const Timeline = () => {
   const [active, setActive] = useState(0);
   return (
-    <section id="journey" className="relative py-32">
+    <section id="journey" className="cv-auto relative py-32">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto reveal">
           <SectionLabel>03 · The Journey</SectionLabel>
@@ -229,7 +229,7 @@ const experience = [
     points: ["5 approved freelance gigs delivered", "Client communication and scope management", "Responsive, modern web interfaces"], icon: Briefcase },
 ];
 export const Experience = () => (
-  <section id="experience" className="relative py-32">
+  <section id="experience" className="cv-auto relative py-32">
     <div className="container">
       <div className="max-w-3xl reveal">
         <SectionLabel>05 · Experience</SectionLabel>
@@ -297,7 +297,7 @@ const responsibilities = [
 export const Projects = () => {
   const [open, setOpen] = useState(false);
   return (
-    <section id="projects" className="relative py-32">
+    <section id="projects" className="cv-auto relative py-32">
       <div className="container">
         <div className="max-w-3xl reveal">
           <SectionLabel>07 · Featured Projects</SectionLabel>
@@ -393,7 +393,7 @@ const skillGroups = [
   { label: "Technology", items: ["HTML", "CSS", "Frontend Development", "Microsoft Office"] },
 ];
 export const Skills = () => (
-  <section id="skills" className="relative py-32 bg-gradient-to-b from-secondary/30 to-background">
+  <section id="skills" className="cv-auto relative py-32 bg-gradient-to-b from-secondary/30 to-background">
     <div className="container">
       <div className="max-w-3xl reveal">
         <SectionLabel>08 · Skills</SectionLabel>
@@ -430,7 +430,7 @@ export const Certifications = () => {
   const [idx, setIdx] = useState<number | null>(null);
   const items: LightboxItem[] = certificates.map((c) => ({ src: c.src, title: c.t, caption: `${c.o} · ${c.badge}` }));
   return (
-    <section id="certificates" className="relative py-32">
+    <section id="certificates" className="cv-auto relative py-32">
       <div className="container">
         <div className="max-w-3xl reveal">
           <SectionLabel>09 · Certificates</SectionLabel>
@@ -518,7 +518,7 @@ export const Gallery = () => {
   const items: LightboxItem[] = filtered.map((g) => ({ src: g.src, title: g.t, caption: g.cat }));
 
   return (
-    <section id="gallery" className="relative py-32 bg-gradient-to-b from-background to-secondary/30">
+    <section id="gallery" className="cv-auto relative py-32 bg-gradient-to-b from-background to-secondary/30">
       <div className="container">
         <div className="max-w-3xl reveal">
           <SectionLabel>10 · Gallery</SectionLabel>
@@ -695,7 +695,7 @@ const socials = [
   { i: Facebook, l: "Facebook", h: "https://facebook.com" },
 ];
 export const Contact = () => (
-  <section id="contact" className="relative py-32 bg-gradient-to-b from-secondary/30 to-background">
+  <section id="contact" className="cv-auto relative py-32 bg-gradient-to-b from-secondary/30 to-background">
     <div className="container">
       <div className="glass rounded-[2.5rem] p-10 lg:p-20 relative overflow-hidden reveal">
         <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-primary/20 blur-[140px]" />

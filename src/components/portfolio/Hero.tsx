@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
-import portrait from "@/assets/ahmed-portrait.jpg";
-import bgGlow from "@/assets/bg-glow.jpg";
+import portrait from "@/assets/ahmed-portrait.webp";
+import bgGlow from "@/assets/bg-glow.webp";
 
 export const Hero = () => {
   const cardRef = useRef<HTMLDivElement>(null);
