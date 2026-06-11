@@ -689,10 +689,10 @@ export const FeaturedCertificates = () => {
 
 /* ---------------- Contact ---------------- */
 const socials = [
-  { i: Linkedin, l: "LinkedIn", h: "https://linkedin.com" },
+  { i: Linkedin, l: "LinkedIn", h: "www.linkedin.com/in/ahmed-mamdouh-867b67388" },
   { i: Github, l: "GitHub", h: "https://github.com/ahmedmamdouh146" },
-  { i: Instagram, l: "Instagram", h: "https://instagram.com" },
-  { i: Facebook, l: "Facebook", h: "https://facebook.com" },
+  { i: Instagram, l: "Instagram", h: "https://www.instagram.com/ahmed_mamdouh0?utm_source=qr" },
+  { i: Facebook, l: "Facebook", h: "https://www.facebook.com/share/19BKpnQiNo/?mibextid=wwXIfr" },
 ];
 export const Contact = () => (
   <section id="contact" className="cv-auto relative py-32 bg-gradient-to-b from-secondary/30 to-background">
