@@ -39,9 +39,10 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        <button
+        <a
+          href="#"
           onClick={(e) => { e.preventDefault(); scrollToId("top"); }}
-          className="flex items-center gap-2 group cursor-pointer bg-none border-none p-0"
+          className="flex items-center gap-2 group"
         >
           <span className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:scale-110 transition-transform">
             <img src={portrait} alt="Ahmed Mamdouh" className="w-full h-full object-cover" />
@@ -49,7 +50,7 @@ export const Navbar = () => {
           <span className="font-display tracking-tight text-lg hidden sm:inline">
             Ahmed <span className="text-gradient-primary">Mamdouh</span>
           </span>
-        </button>
+        </a>
 
         <ul className="hidden lg:flex items-center gap-1">
           {links.map((l) => (

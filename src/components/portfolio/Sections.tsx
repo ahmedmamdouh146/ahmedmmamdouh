@@ -171,7 +171,7 @@ export const Timeline = () => {
                   </button>
                 </div>
                 <div className="hidden md:block" />
-                <span className={`absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full transition-all ring-4 ring-background ${isActive ? "bg-primary-glow scale-150 glow-primar[...]
+                <span className={`absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full transition-all ring-4 ring-background ${isActive ? "bg-primary-glow scale-150 glow-primary" : "bg-primary"}`} />
               </div>
             );
           })}
@@ -319,7 +319,7 @@ export const Projects = () => {
                 height={1280}
                 className="relative w-full h-auto rounded-2xl object-cover aspect-[4/5] group-hover:scale-[1.02] transition-transform duration-700"
               />
-              <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-xs uppercase tracking-widest glow-prim[...]
+              <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-xs uppercase tracking-widest glow-primary">
                 <Crown className="w-3.5 h-3.5" /> Project Leader
               </div>
               <div className="absolute bottom-6 right-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs">
@@ -352,8 +352,8 @@ export const Projects = () => {
         {/* Other projects */}
         <div className="grid md:grid-cols-2 gap-6 mt-16">
           {[
-            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Organized a community campaign on cardiovascular awareness — interactive booth, educational tools, and on-g[...]
-            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered through the DEPI platform — modern interfaces shipped under real client constr[...]
+            { tag: "Community · Healthcare", t: "Healthcare Awareness Campaign", d: "Organized a community campaign on cardiovascular awareness — interactive booth, educational tools, and on-ground engagement with hundreds of attendees.", i: Megaphone, img: activityCampaign },
+            { tag: "Tech · Freelancing", t: "DEPI Freelancing Journey", d: "Five approved frontend gigs delivered through the DEPI platform — modern interfaces shipped under real client constraints.", i: Code2, img: depiGigs },
           ].map((p, i) => (
             <article key={p.t} className="group glass glass-hover rounded-3xl overflow-hidden reveal" style={{ transitionDelay: `${i * 80}ms` }}>
               <div className="relative h-56 overflow-hidden">
@@ -661,7 +661,7 @@ export const FeaturedCertificates = () => {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={c.src} alt={c.t} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-[10px] uppercase tracking-widest [...]
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-primary text-primary-foreground text-[10px] uppercase tracking-widest glow-primary">
                   <Crown className="w-3 h-3" /> {c.badge}
                 </div>
               </div>
@@ -709,10 +709,10 @@ export const Contact = () => (
               If you're hiring in healthcare, tech, or anything in between — I'd love to hear from you.
             </p>
             <div className="flex flex-wrap gap-4 mt-8" id="cv">
-              <a href="mailto:ahmedmamdouh1462007@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scal[...]
+              <a href="mailto:ahmedmamdouh146207@gmail.com" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground glow-primary hover:scale-105 transition-transform">
                 <Mail className="w-4 h-4" /> Contact Me
               </a>
-              <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-[...]
+              <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
                 <Eye className="w-4 h-4" /> View CV
               </a>
               <a href={`${import.meta.env.BASE_URL}Ahmed-Mamdouh-CV.pdf`} download className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass glass-hover">
@@ -721,7 +721,7 @@ export const Contact = () => (
             </div>
             <div className="flex gap-3 mt-8">
               {socials.map((s) => (
-                <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer" aria-label={s.l} className="w-12 h-12 rounded-2xl glass grid place-items-center hover:bg-primary hover:text-prima[...]
+                <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer" aria-label={s.l} className="w-12 h-12 rounded-2xl glass grid place-items-center hover:bg-primary hover:text-primary-foreground transition-colors">
                   <s.i className="w-5 h-5" />
                 </a>
               ))}
@@ -733,8 +733,8 @@ export const Contact = () => (
               <input className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors" placeholder="Email" type="email" />
             </div>
             <input className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors" placeholder="Subject" />
-            <textarea rows={5} className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me abou[...]
-            <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] t[...]
+            <textarea rows={5} className="w-full bg-secondary border border-border rounded-2xl px-5 py-4 outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me about the opportunity…" />
+            <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] transition-transform">
               <Send className="w-4 h-4" /> Send message
             </button>
           </form>
@@ -743,7 +743,7 @@ export const Contact = () => (
 
       <footer className="mt-16 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm text-muted-foreground">
         <div>© Ahmed Mamdouh — All Rights Reserved</div>
-        <div className="flex items-center gap-2"><Sparkles className="w-3 h-3 text-primary-glow" /> Healthcare | Technology | Leadership</div>
+        <div className="flex items-center gap-2"><Sparkles className="w-3 h-3 text-primary-glow" /> Healthcare · Technology · Leadership</div>
       </footer>
     </div>
   </section>
