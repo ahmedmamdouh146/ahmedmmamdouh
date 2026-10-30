@@ -3,7 +3,7 @@ import { useCounter } from "@/hooks/useReveal";
 import { Lightbox, type LightboxItem } from "./Lightbox";
 
 import {
-  Activity, Award, Brain, Briefcase, Calendar, Code2, Crown, FileCheck, Github,
+  Activity, Award, Brain, Briefcase, Calendar, Code2, Crown, Github,
   GraduationCap, Heart, Instagram, Linkedin, Mail, MapPin, Megaphone, Pill,
   Quote, Send, Sparkles, Star, Target, Trophy, Users, Facebook, ExternalLink, FlaskConical,
   Download, Eye, ImageIcon, Layers, Presentation, ClipboardList
