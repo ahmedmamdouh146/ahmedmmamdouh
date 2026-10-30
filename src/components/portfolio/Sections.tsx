@@ -472,6 +472,7 @@ export const Certifications = () => {
               </div>
             </button>
           ))}
+        </div>
       </div>
       <Lightbox
         items={items}
