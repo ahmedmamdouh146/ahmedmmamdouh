@@ -3,7 +3,7 @@ import { useCounter } from "@/hooks/useReveal";
 import { Lightbox, type LightboxItem } from "./Lightbox";
 
 import {
-  Activity, Award, Brain, Briefcase, Calendar, Code2, Crown, FileCheck, Github,
+  Activity, Award, Brain, Briefcase, Calendar, Code2, Crown, Github,
   GraduationCap, Heart, Instagram, Linkedin, Mail, MapPin, Megaphone, Pill,
   Quote, Send, Sparkles, Star, Target, Trophy, Users, Facebook, ExternalLink, FlaskConical,
   Download, Eye, ImageIcon, Layers, Presentation, ClipboardList
@@ -16,6 +16,9 @@ import certKingTeam from "@/assets/cert-king-team.webp";
 import certKingGen from "@/assets/cert-king-generation.webp";
 import certSeropipe from "@/assets/cert-seropipe.webp";
 import certBestMovie from "@/assets/cert-best-movie.webp";
+import certLimitless from "@/assets/cert-limitless.webp";
+import certScops from "@/assets/cert-scops.webp";
+import certDepi from "@/assets/cert-depi.webp";
 import activityGroup from "@/assets/activity-group.webp";
 import activityTeam from "@/assets/activity-team.webp";
 import activityCampaign from "@/assets/activity-campaign.webp";
@@ -424,6 +427,9 @@ const certificates: { src: string; t: string; o: string; badge: string; tag: str
   { src: certKingGen,   t: "King of the Generation",         o: "SCOPS · Community Pharmacy Workshop", badge: "Generation Honor", tag: "Honor" },
   { src: certBestMovie, t: "Best Movie — Antibodies",        o: "SCOPS · Community Pharmacy Workshop", badge: "Best Creative Work", tag: "Activity" },
   { src: certSeropipe,  t: "Awareness Campaign",             o: "Seropipe · SCOPS", badge: "Voice for Change", tag: "Awareness" },
+  { src: certLimitless, t: "Limitless 360° Career Tracks",   o: "STAD · NAPHS Consultancy", badge: "EACMED Accredited · 7.5 CME", tag: "Professional" },
+  { src: certScops,     t: "Community Pharmacy Workshop",    o: "SCOPS 2026", badge: "Certificate of Participation", tag: "Workshop" },
+  { src: certDepi,      t: "React Frontend Web Developer",   o: "DEPI · Ministry of Communications & IT", badge: "Core Learning Outcomes", tag: "Technology" },
 ];
 
 export const Certifications = () => {
@@ -466,17 +472,6 @@ export const Certifications = () => {
               </div>
             </button>
           ))}
-          {/* DEPI placeholder card */}
-          <div className="glass rounded-3xl p-8 reveal flex flex-col justify-between">
-            <div>
-              <Code2 className="w-8 h-8 text-primary-glow mb-4" />
-              <h3 className="font-display text-xl">DEPI Frontend Training</h3>
-              <div className="mt-1 text-sm text-muted-foreground">Digital Egypt Pioneers Initiative</div>
-            </div>
-            <div className="mt-6 inline-flex items-center gap-2 text-xs text-primary-glow uppercase tracking-widest">
-              <FileCheck className="w-3.5 h-3.5" /> In progress · 2025–2026
-            </div>
-          </div>
         </div>
       </div>
       <Lightbox
@@ -508,6 +503,9 @@ const galleryItems: GalleryEntry[] = [
   { src: certKingGen, cat: "Certificates", t: "King of the Generation" },
   { src: certBestMovie, cat: "Certificates", t: "Best Movie — Antibodies" },
   { src: certSeropipe, cat: "Awareness Campaigns", t: "Seropipe Awareness" },
+  { src: certLimitless, cat: "Certificates", t: "Limitless 360° Career Tracks" },
+  { src: certScops, cat: "Certificates", t: "Community Pharmacy Workshop" },
+  { src: certDepi, cat: "Certificates", t: "React Frontend Web Developer" },
 ];
 const categories = ["All", "Professional Portraits", "Leadership Activities", "SCOPS Activities", "Awareness Campaigns", "Academic Projects", "Certificates"];
 
